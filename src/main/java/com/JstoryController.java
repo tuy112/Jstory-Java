@@ -16,6 +16,6 @@ public class JstoryController {
         // 템플릿에 전달할 데이터
         model.addAttribute("data", "hello world");
         
-        return "./home/index.html";
+        return "./index.html";
     }
 }
