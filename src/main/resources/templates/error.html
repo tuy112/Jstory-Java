@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+    <title>에러페이지</title>
+    <link rel="stylesheet" href="/css/common/error.css">
+</head>
+<body>
+    <div id="errorWrap">
+    	<h1>오류가 확인되었습니다..</h1><span>수정 부탁드려요 :)</span>
+	    
+	    <p>We couldn't find the page you were looking for.</p>
+	    <p>Please check the URL and try again.</p>
+	    <div class="error-details">
+	        <p>에러 타입: [[${status}]]</p>
+	        <p>에러 명: [[${error}]]</p>
+	        <p>오류 발생 일자: [[${timestamp}]]</p>
+	    </div>
+    </div>
+</body>
+</html>
