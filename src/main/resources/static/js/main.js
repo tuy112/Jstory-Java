@@ -1,21 +1,26 @@
-// 2. 산 클릭 이벤트 - 모달 창
-function mountain() {
-    alert('산이 클릭됨');
+// 1. 카드 클릭시 modal 효과
+function showModalAndRedirect(url) {
+    // 모달 표시
+    const modal = document.getElementById('modal');
+	modal.style.display = 'block';
+
+    // 4초 후 페이지로 이동
+    setTimeout(function() {
+        window.location.href = url;
+    }, 4000);
+	
+	// 원래대로 돌려놓기 (5초뒤)
+	setTimeout(function() {
+        modal.style.display = 'none';
+    }, 5000);
 }
 
-// 3. "산행추가" 버튼 (모달창 열기)
-function addStory() {
-    const modal = document.querySelector('.modal');
-    modal.style.display = "block";
-}
 
-// 4. 모달 닫기 버튼
-function closeModal(){
-    const modal = document.querySelector('.modal');
-    modal.style.display = "none";
-}
 
-// 5. 글쓰기 완료 버튼 (db연결-ajax)
+
+
+
+// 글쓰기 완료 버튼 (db연결-ajax)
 function sendDb(event) {
     sendform = event.target;
     event.preventDefault();
@@ -37,3 +42,5 @@ function sendDb(event) {
         return;
     }
 }
+
+

@@ -11,11 +11,27 @@ import com.vo.JstorySearchVO;
 @RequestMapping("")
 public class JstoryController {
 
+	// 대문
     @GetMapping("")
-    public String index(Model model, JstorySearchVO searchVO) {    
-        // 템플릿에 전달할 데이터
-        model.addAttribute("data", "hello world");
+    public String startPage(Model model, JstorySearchVO searchVO) {    
+        
         
         return "./index.html";
+    }
+    
+    // 프로필
+    @GetMapping("/profile")
+    public String profilePage(Model model, JstorySearchVO searchVO) {    
+        
+        
+        return "./pages/profile.html";
+    }
+    
+    // 프로젝트
+    @GetMapping("/project")
+    public String projectPage(Model model, JstorySearchVO searchVO) {    
+        
+        
+        return "./pages/project.html";
     }
 }

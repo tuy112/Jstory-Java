@@ -98,21 +98,65 @@ table {
     margin-left: 5px;
     font-family: 'Montserrat', sans-serif;
 }
-#header .search {
+#header .hamburger-menu {
+	position: fixed;
+	top: 10px;
+    right: 10px;
     cursor: pointer;
     border: 1px solid #333;
+    background: #fff;
     border-radius: 3px;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     padding: 2px;
     margin-top: 10px;
     margin-right: 10px;
-    transition: 0.3s;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    z-index: 1100;
 }
-#header .search:hover {
-    background: #333;
+#header .hamburger-menu i {
+	font-size: 22px;
+	cursor: pointer;
+}
+#header .hamburger-menu:hover {
+    background: #999;
     color: #fff;
 }
+#header .hamburger-menu:active {
+	background-color: #333;
+    transform: scale(0.95);
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #555;
+    opacity: 0.9;
+    color: white;
+    transition: right 0.5s ease;
+    z-index: 1000;
+}
+.side-menu.open {
+    right: 0;
+}
+.menu-section li {
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.menu-section li:first-child {
+	margin-top: 70px;
+}
+.menu-section li:hover {
+    background-color: #34495e;
+}
+
 
 /* footer */
 #footer {
