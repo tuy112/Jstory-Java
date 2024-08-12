@@ -2,9 +2,134 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<title>나의 일대기</title>
+	<!-- jquery -->
+   	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
+   	<!-- css link -->
+   	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+	<link rel="stylesheet" href="/css/common/reset.css">
+	<link rel="stylesheet" href="/css/common/common.css">
+	<link rel="stylesheet" href="/css/sub.css">
 </head>
 <body>
+	<div id="wrap">
+		<!-- header -->
+        <header id="header">
+            <h1>
+                <a href="/home">JSTORY</a>
+                <span>PROJECT</span>
+            </h1>
+            <button class="hamburger-menu" onclick="menu();">
+            	<i class="xi-hamburger-back"></i>
+            </button>
+            <div class="side-menu" id="side-menu">
+			    <!-- 메뉴 항목 -->
+			    <ul class="menu-section">
+			    	<li><a href="/home">HOME</a></li>
+			    	<li><a href="/todo">TODOLIST</a></li>
+			    	<li><a href="/mountain">나만의 등산 기록방(GIS)</a></li>
+			    </ul>
+			</div>
+        </header>
+        
+        <section id="container" class="main">
+        	<!-- 프로젝트 타임라인 -->
+	        <div class="timeline">
+			    <div class="timeline-item">
+			        <div class="timeline-item-content">
+			            <span class="tag tag1">☆ 1</span>
+			            <h2>신한은행 통합단말 차세대프로젝트</h2>
+			            <p class="date">2022-02-03 ~ 2022-09-30</p>
+			            <p>
+			                <strong>업무명:</strong> 화면로직개발<br>
+			                <strong>사용 언어:</strong> 스프링, 인젠트, 자바<br>
+			                <strong>단말:</strong> 통합단말 변환 및 보정 개발<br>
+			                웹스퀘어를 사용하여 구통합단말 as-is(map,txt파일)를 신통합단말 to-be(xml)로 전환 개발을 담당 (+디지털창구)<br>
+			                <strong>결함관리:</strong> 결함목록조회 및 처리
+			            </p>
+			            <a href="https://byline.network/2021/01/21-119/" target="_blank" class="read-more">
+			                관련 기사 보기
+			            </a>
+			            <span class="circle"></span>
+			        </div>
+			    </div>
+			    
+			    <div class="timeline-item">
+			        <div class="timeline-item-content">
+			            <span class="tag tag2">☆ 2</span>
+			            <h2>프로젝트 2</h2>
+			            <p class="date">2021-05-10 ~ 2021-11-15</p>
+			            <p>
+			                <strong>업무명:</strong> 시스템 개선<br>
+			                <strong>사용 언어:</strong> 자바스크립트, 리액트<br>
+			                <strong>기타:</strong> 프론트엔드 최적화 및 사용자 경험 향상
+			            </p>
+			            <span class="circle"></span>
+			        </div>
+			    </div>
+			    
+			    <div class="timeline-item">
+			        <div class="timeline-item-content">
+			            <span class="tag tag3">☆ 3</span>
+			            <h2>프로젝트 3</h2>
+			            <p class="date">2020-01-01 ~ 2020-07-31</p>
+			            <p>
+			                <strong>업무명:</strong> 백엔드 개발<br>
+			                <strong>사용 언어:</strong> 파이썬, Django<br>
+			                <strong>기타:</strong> API 개발 및 데이터베이스 관리
+			            </p>
+			            <span class="circle"></span>
+			        </div>
+			    </div>
+			</div>
+			<!-- 타임라인 아이템 끝 -->
+			
+			<!-- 글쓰기 버튼 -->
+    		<button class="write-button" onclick="openModal()">글쓰기</button>
+	    </section>
+	    
+	    <!-- footer -->
+        <footer id="footer">
+            <div class="inner">
+                <h3>CONTACT ME</h3>
+                <ul class="links">
+                    <li><a href="https://www.youtube.com/channel/UCIUZejYbHXZOHhwUokcRBUQ"><img src="/images/YoutubeLogo.png" alt="유튜브"/><em>YOUTUBE</em></a></li>
+                    <li><a href="https://jh-healing-place.tistory.com/"><img src="/images/NaverLogo.png" alt="티스토리"/><em>BLOG</em></a></li>
+                    <li><a href="https://www.instagram.com/j_hyeok_8/?hl=ko"><img src="/images/InstarLogo.png" alt="인스타그램"/><em>INSTAGRAM</em></a></li>
+                </ul>
+                <div class="always">
+                    <p>Future Korean NO.1 Developer</p>
+                </div>
+
+                <div class="top">
+                	<a href="#">
+                		<i class="xi-angle-up"></i>
+                	</a>
+                </div>
+            </div>
+        </footer>
+	</div>
 	
+	<!-- 모달 창 -->
+	<div id="modal" class="modal">
+	    <div class="modal-content">
+	        <span class="close" onclick="closeModal()">&times;</span>
+	        <h2>글쓰기</h2>
+	        <form>
+	            <label for="title">프로젝트명</label>
+	            <input type="text" id="title" name="title" required><br>
+	            <label for="content">내용</label>
+	            <textarea id="content" name="content" rows="10" required></textarea><br>
+	            <button type="submit">작성 완료</button>
+	        </form>
+	    </div>
+	</div>
+	
+	<!-- script part -->
+    <script src="/js/common.js"></script>
+    <script src="/js/sub.js"></script>
 </body>
 </html>
