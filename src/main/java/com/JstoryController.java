@@ -12,7 +12,7 @@ import com.vo.JstorySearchVO;
 public class JstoryController {
 
 	// 대문
-    @GetMapping("")
+    @GetMapping("/home")
     public String startPage(Model model, JstorySearchVO searchVO) {    
         
         

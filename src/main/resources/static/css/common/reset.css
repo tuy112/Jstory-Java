@@ -35,8 +35,8 @@ body {
 a, .btn {
 	line-height: 1.6;
     text-decoration: none;
-    color:#333;
     cursor: pointer;
+    color: #111;
 }
 
 ol, ul , li {
@@ -73,112 +73,4 @@ table {
     bottom: 0;
     right: 0;
 
-}
-
-/* header */
-#header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-#header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight: 600;
-    margin-top: 7px;
-    margin-left: 10px;
-	transition: 0.3s;
-	text-align: center;
-}
-#header h1:hover {
-	transform: scaleY(1.1);
-}
-#header h1 span {
-    font-size: 12px;
-    margin-left: 5px;
-    font-family: 'Montserrat', sans-serif;
-}
-#header .hamburger-menu {
-	position: fixed;
-	top: 10px;
-    right: 10px;
-    cursor: pointer;
-    border: 1px solid #333;
-    background: #fff;
-    border-radius: 3px;
-    width: 30px;
-    height: 30px;
-    padding: 2px;
-    margin-top: 10px;
-    margin-right: 10px;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-    z-index: 1100;
-}
-#header .hamburger-menu i {
-	font-size: 22px;
-	cursor: pointer;
-}
-#header .hamburger-menu:hover {
-    background: #999;
-    color: #fff;
-}
-#header .hamburger-menu:active {
-	background-color: #333;
-    transform: scale(0.95);
-}
-
-.side-menu {
-    position: fixed;
-    top: 0;
-    right: -300px;
-    width: 300px;
-    height: 100%;
-    background-color: #555;
-    opacity: 0.9;
-    color: white;
-    transition: right 0.5s ease;
-    z-index: 1000;
-}
-.side-menu.open {
-    right: 0;
-}
-.menu-section li {
-    padding: 15px 20px;
-    font-size: 18px;
-    font-weight: 600;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
-.menu-section li:first-child {
-	margin-top: 70px;
-}
-.menu-section li:hover {
-    background-color: #34495e;
-}
-
-
-/* footer */
-#footer {
-	text-align: right;
-	margin-right: 10px;
-	margin-bottom: 5px;
-}
-#footer p {
-	font-size: 13px;
-	font-weight: 600;
-}
-
-/* scroll bar */
-::-webkit-scrollbar {
-    width: 13px;
-}
-::-webkit-scrollbar-thumb {
-    background-color: #2f3542;
-    border-radius: 10px;
-}
-::-webkit-scrollbar-track {
-    background-color: grey;
-    border-radius: 10px;
-    box-shadow: inset 0px 0px 5px white;
 }
