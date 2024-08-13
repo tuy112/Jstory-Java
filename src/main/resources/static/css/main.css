@@ -1,8 +1,10 @@
 /* main */
-.main {}
+.main {
+	height: 100%;
+	margin-top: 50px;
+}
 
 /* select-wrap */
-.main .select-wrap {}
 .main .select-wrap h2 {
   text-align: center;
   margin-bottom: 20px;

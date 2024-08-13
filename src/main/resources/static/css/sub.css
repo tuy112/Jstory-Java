@@ -1,7 +1,8 @@
 /* profile css */
 /* intro */
-.main .intro .inner { 
+.main { 
 	height: 100%;
+	margin-bottom: 50px;
 }
 .intro h2 { 
 	font-size: 35px; 
