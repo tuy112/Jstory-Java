@@ -101,6 +101,7 @@
     color: #fff;
     transition: 0.3s;
     text-align: center;
+    font-size: 12px;
 }
 .bottom-menu li a:hover {
     text-decoration: underline;
