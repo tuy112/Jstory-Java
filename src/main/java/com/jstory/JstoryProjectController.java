@@ -1,43 +1,23 @@
-package com;
+package com.jstory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import com.vo.JstorySearchVO;
-
-@Controller
+@RestController
 @RequestMapping("")
-public class JstoryController {
-
-	// 대문
-    @GetMapping("/home")
-    public String startPage(Model model) {    
-        
-        
-        return "./index.html";
-    }
-    
-    // 프로필
-    @GetMapping("/profile")
-    public String profilePage(Model model) {    
-        
-        
-        return "./pages/profile.html";
-    }
+@CrossOrigin(origins = "http://localhost:3000")
+public class JstoryProjectController {
     
     // 프로젝트
     @GetMapping("/project")
-    public String projectPage(Model model) {  
+    public List<Map<String, Object>> projectPage() {  
     	
     	List<Map<String, Object>> projectList = new ArrayList<>();
     	
@@ -57,9 +37,7 @@ public class JstoryController {
                 "화면 설계서 및 규격서를 보면서 구현 단계 (7월)",
                 "구현한 화면에 대해서 직접 테스트 진행 및 수정 (8월 진행 예정)",
                 "인수테스트 및 최종 완성 (9월)",
-                "각 페이지 리스트 목록 CRUD",
-                "추가 업무 3",
-                "추가 업무 4"
+                "각 페이지 리스트 목록 CRUD"
             )
         ));
 
@@ -110,9 +88,7 @@ public class JstoryController {
         projectList.add(project2);
         projectList.add(project3);
         
-        // 모델에 프로젝트 데이터를 추가
-        model.addAttribute("projects", projectList);
         
-        return "./pages/project.html";
+        return projectList;
     }
 }
