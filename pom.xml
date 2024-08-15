@@ -57,17 +57,25 @@
 		    <artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 		
-		<!-- 저장 자동 재부팅 -->
-		<dependency>
+		<!-- 웹 소캣 -->
+        <dependency>
 		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-devtools</artifactId>
+		    <artifactId>spring-boot-starter-websocket</artifactId>
 		</dependency>
+		
 		<!-- lombok -->
 		<dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        
+        <!-- 저장 자동 재부팅 -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+        
 	</dependencies>
 
 	<build>
