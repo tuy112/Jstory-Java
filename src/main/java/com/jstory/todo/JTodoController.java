@@ -1,4 +1,4 @@
-package com.todo;
+package com.jstory.todo;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

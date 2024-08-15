@@ -1,4 +1,4 @@
-package com.mountain;
+package com.jstory.mountain;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
