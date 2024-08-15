@@ -68,43 +68,45 @@
 /* timeline */
 .timeline {
     position: relative;
-    margin: 0 auto;
     padding: 20px 0;
-    width: 90%;
-    max-width: 800px;
 }
 
 .timeline-item {
-    margin-bottom: 20px;
-    position: relative;
+    margin-bottom: 30px;
 }
 
 .timeline-item-content {
-    background: white;
     padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #f8f9fa;
+    border-radius: 4px;
     position: relative;
 }
 
 .timeline-item-content .tag {
-    background: #3498db;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
     padding: 5px 10px;
-    border-radius: 4px;
-    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 12px;
 }
 
-.timeline-item-content h2 {
-    margin: 10px 0;
+.timeline-item-content h3 {
+    margin-top: 0;
     font-size: 18px;
 }
 
 .timeline-item-content .date {
     font-size: 14px;
-    color: #888;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.timeline-item-content ul {
+    padding-left: 20px;
+    margin-bottom: 0;
 }
 
 .timeline-item-content p {
@@ -131,7 +133,7 @@
     border-radius: 50%;
     position: absolute;
     top: 20px;
-    left: -28px;
+    left: -5px;
 }
 
 .timeline-item:before {
@@ -152,7 +154,7 @@
 
 .write-button {
     background-color: #3498db;
-    color: white;
+    color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -168,7 +170,7 @@
 
 /* 모달 css */
 .modal {
-    display: none; /* 기본적으로 숨김 */
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -179,33 +181,34 @@
     background-color: rgba(0, 0, 0, 0.4);
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 
 .modal-content {
-    background-color: white;
-    margin: 15% auto;
+    background-color: #fefefe;
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
-    position: relative;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .close {
     color: #aaa;
     float: right;
     font-size: 28px;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: #111;
 }
 
-.modal-content h2 {
+.modal-content h3 {
     margin-top: 0;
 }
 
@@ -216,23 +219,18 @@
 .modal-content input[type="text"],
 .modal-content textarea {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0 20px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+    padding: 8px;
+    margin-top: 5px;
 }
 
-.modal-content button[type="submit"] {
-    background-color: #3498db;
-    color: white;
-    border: none;
+form button {
+    margin-top: 10px;
     padding: 10px 20px;
-    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
     cursor: pointer;
-    font-size: 16px;
 }
-
-.modal-content button[type="submit"]:hover {
-    background-color: #2980b9;
+form button:hover {
+    background-color: #45a049;
 }

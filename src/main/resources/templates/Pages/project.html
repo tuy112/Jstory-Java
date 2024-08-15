@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
    	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    
    	<!-- css link -->
+   	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
    	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 	<link rel="stylesheet" href="/css/common/reset.css">
 	<link rel="stylesheet" href="/css/common/common.css">
@@ -47,60 +49,37 @@
         </header>
         
         <section id="container" class="main">
-        	<!-- 프로젝트 타임라인 -->
-	        <div class="timeline">
-			    <div class="timeline-item">
-			        <div class="timeline-item-content">
-			            <span class="tag tag1">☆ 1</span>
-			            <h2>신한은행 통합단말 차세대프로젝트</h2>
-			            <p class="date">2022-02-03 ~ 2022-09-30</p>
-			            <p>
-			                <strong>업무명:</strong> 화면로직개발<br>
-			                <strong>사용 언어:</strong> 스프링, 인젠트, 자바<br>
-			                <strong>단말:</strong> 통합단말 변환 및 보정 개발<br>
-			                웹스퀘어를 사용하여 구통합단말 as-is(map,txt파일)를 신통합단말 to-be(xml)로 전환 개발을 담당 (+디지털창구)<br>
-			                <strong>결함관리:</strong> 결함목록조회 및 처리
-			            </p>
-			            <a href="https://byline.network/2021/01/21-119/" target="_blank" class="read-more">
-			                관련 기사 보기
-			            </a>
-			            <span class="circle"></span>
-			        </div>
-			    </div>
-			    
-			    <div class="timeline-item">
-			        <div class="timeline-item-content">
-			            <span class="tag tag2">☆ 2</span>
-			            <h2>프로젝트 2</h2>
-			            <p class="date">2021-05-10 ~ 2021-11-15</p>
-			            <p>
-			                <strong>업무명:</strong> 시스템 개선<br>
-			                <strong>사용 언어:</strong> 자바스크립트, 리액트<br>
-			                <strong>기타:</strong> 프론트엔드 최적화 및 사용자 경험 향상
-			            </p>
-			            <span class="circle"></span>
-			        </div>
-			    </div>
-			    
-			    <div class="timeline-item">
-			        <div class="timeline-item-content">
-			            <span class="tag tag3">☆ 3</span>
-			            <h2>프로젝트 3</h2>
-			            <p class="date">2020-01-01 ~ 2020-07-31</p>
-			            <p>
-			                <strong>업무명:</strong> 백엔드 개발<br>
-			                <strong>사용 언어:</strong> 파이썬, Django<br>
-			                <strong>기타:</strong> API 개발 및 데이터베이스 관리
-			            </p>
-			            <span class="circle"></span>
-			        </div>
-			    </div>
-			</div>
-			<!-- 타임라인 아이템 끝 -->
-			
-			<!-- 글쓰기 버튼 -->
-    		<button class="write-button" onclick="openModal()">글쓰기</button>
+	        <h2 class="my-4">프로젝트 목록</h2>
+	        <ul class="list-group">
+	            <!-- 프로젝트 목록 순회 -->
+	            <li th:each="project : ${projects}" class="list-group-item">
+	                <div class="timeline-item">
+	                    <div class="timeline-item-content">
+	                        <span class="tag" th:text="${project['id']}">☆</span>
+	                        <h3 th:text="${project['name']}"></h3>
+	                        <p class="date" th:text="${project['period']}"></p>
+	                        <p><strong>업무명:</strong> <span th:text="${project['tasks']['업무명']}"></span></p>
+	                        <p><strong>사용 언어:</strong> <span th:text="${project['tasks']['사용 언어']}"></span></p>
+	                        <p><strong>개발환경:</strong> <span th:text="${project['tasks']['개발환경']}"></span></p>
+	                        <p><strong>소속 회사:</strong> <span th:text="${project['tasks']['소속 회사']}"></span></p>
+	                        <p><strong>성과:</strong> <span th:text="${project['tasks']['성과']}"></span></p>
+	                        <p><strong>주요 업무:</strong></p>
+	                        <ul>
+	                            <li th:each="task : ${project['tasks']['주요 업무']}" th:text="${task}"></li>
+	                        </ul>
+	                        <div th:if="${project['tasks']['참고자료']}">
+	                            <a th:href="${project['tasks']['참고자료']}" target="_blank" class="read-more">관련 기사 보기</a>
+	                        </div>
+	                        <span class="circle"></span>
+	                    </div>
+	                </div>
+	            </li>
+	        </ul>
+	        
+	        <!-- 글쓰기 버튼 -->
+   			<button class="write-button" onclick="openModal()">글쓰기</button>
 	    </section>
+	    
 	    
 	    <!-- footer -->
         <footer id="footer">
@@ -126,18 +105,31 @@
 	
 	<!-- 모달 창 -->
 	<div id="modal" class="modal">
-	    <div class="modal-content">
-	        <span class="close" onclick="closeModal()">&times;</span>
-	        <h2>글쓰기</h2>
-	        <form>
-	            <label for="title">프로젝트명</label>
-	            <input type="text" id="title" name="title" required><br>
-	            <label for="content">내용</label>
-	            <textarea id="content" name="content" rows="10" required></textarea><br>
-	            <button type="submit">작성 완료</button>
-	        </form>
-	    </div>
-	</div>
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>글쓰기</h2>
+            <form id="projectForm">
+                <label for="title">프로젝트명</label>
+                <input type="text" id="title" name="title" required><br>
+                <label for="period">기간</label>
+                <input type="text" id="period" name="period" required><br>
+                <label for="tasks">업무명</label>
+                <input type="text" id="tasks" name="tasks" required><br>
+                <label for="language">사용 언어</label>
+                <input type="text" id="language" name="language" required><br>
+                <label for="environment">개발환경</label>
+                <input type="text" id="environment" name="environment" required><br>
+                <label for="company">소속 회사</label>
+                <input type="text" id="company" name="company" required><br>
+                <label for="outcome">성과</label>
+                <input type="text" id="outcome" name="outcome" required><br>
+                <label for="mainTasks">주요 업무 (구분자는 쉼표로)</label>
+                <input type="text" id="mainTasks" name="mainTasks" required><br>
+                
+                <button type="button" onclick="submitForm()">작성 완료</button>
+            </form>
+        </div>
+    </div>
 	
 	<!-- script part -->
     <script src="/js/common.js"></script>
