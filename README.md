@@ -6,13 +6,13 @@ src/main/java/com/jstory/todo/
 │   └── ExerciseRecordController.java
 ├── service/
 │   ├── TodoService.java
-│   └── ExerciseRecordService.java
-├── service/impl/
 │   ├── TodoServiceImpl.java
+│   ├── ExerciseRecordService.java
 │   └── ExerciseRecordServiceImpl.java
 └── vo/
     ├── TodoVO.java
     └── ExerciseRecordVO.java
+    
 
 
 
