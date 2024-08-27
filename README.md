@@ -12,12 +12,7 @@ src/main/java/com/jstory/todo/
 │   └── ExerciseRecordService.java  
 └── vo/  
     ├── TodoVO.java  
-    └── ExerciseRecordVO.java  
-
-src/main/resources/  
-├── mybatis-config.xml  
-└── mapper/  
-    └── sqlMapper.xml  
+    └── ExerciseRecordVO.java
 
 
 
