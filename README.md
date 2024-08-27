@@ -2,27 +2,21 @@
 
 src/main/java/com/jstory/todo/
 
-├── controller/
-
-│   ├── JTodoController.java
-
-│   └── ExerciseRecordController.java
-
-├── service/
-
-│   ├── TodoService.java
-
-│   ├── TodoServiceImpl.java
-
-│   ├── ExerciseRecordService.java
-
-│   └── ExerciseRecordServiceImpl.java
-
-└── vo/
-
-    ├── TodoVO.java
-    
-    └── ExerciseRecordVO.java
+├── controller/ <br>
+│   │ <br>
+│   ├── JTodoController.java <br>
+│   └── ExerciseRecordController.java <br>
+│ <br>
+├── service/ <br>
+│   │ <br>
+│   ├── TodoService.java <br>
+│   ├── TodoServiceImpl.java <br>
+│   ├── ExerciseRecordService.java <br> 
+│   └── ExerciseRecordServiceImpl.java <br>
+│ <br>
+└── vo/ <br>
+    ├── TodoVO.java <br>
+    └── ExerciseRecordVO.java <br>
 
     
 
