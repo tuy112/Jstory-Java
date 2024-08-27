@@ -27,10 +27,10 @@ src/main/java/com/jstory/todo/
 
 #### 2. application.yml 설정 파일 작성
 
-#### 3. 엔티티 클래스 작성
+#### 3. VO 작성
 
-#### 4. Repository 인터페이스 작성
+#### 4. ServiceImpl 작성
 
-#### 5. Service 클래스 작성
+#### 5. Service 작성
 
-#### 6. Controller 클래스 작성 및 API 엔드포인트 설정
+#### 6. Controller 작성 및 API 엔드포인트 설정
