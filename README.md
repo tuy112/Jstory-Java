@@ -1,17 +1,29 @@
 ### 파일 구조
 
 src/main/java/com/jstory/todo/
+
 ├── controller/
+
 │   ├── JTodoController.java
+
 │   └── ExerciseRecordController.java
+
 ├── service/
+
 │   ├── TodoService.java
+
 │   ├── TodoServiceImpl.java
+
 │   ├── ExerciseRecordService.java
+
 │   └── ExerciseRecordServiceImpl.java
+
 └── vo/
+
     ├── TodoVO.java
+    
     └── ExerciseRecordVO.java
+
     
 
 
