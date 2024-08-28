@@ -4,7 +4,7 @@ src/main/java/com/jstory/todo/
 
 ├── controller/ <br>
 │   │ <br>
-│   ├── JTodoController.java <br>
+│   ├── TodoController.java <br>
 │   └── ExerciseRecordController.java <br>
 │ <br>
 ├── service/ <br>
