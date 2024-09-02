@@ -1,0 +1,35 @@
+	<!doctype html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- 테이블 리스트 -->
+		<table cellspacing="0"
+		        class="table table-header-center table-hover table-bordered small text-nowrap dataTable no-footer table-text-center table-align-middle"
+		        id="dataTable" width="100%">
+			<thead class="thead-light">
+              <tr>
+                  <th class="sorting_disabled">이벤트명</th>
+                  <th class="sorting_disabled">등록일</th>          
+              </tr>
+            </thead>
+			<tbody th:if="${totalCnt > 0}">
+				<tr th:each="info : ${todoList}">
+		                 	<!-- <td>NO</td> -->
+		                 	<!-- <td>업체명</td> -->
+		                 	<td th:text="${info.eventName}"></td>
+		                 	<td th:text="${info.regDate}"></td>
+		                 	<!-- <td>상태</td> -->
+		              	</tr>
+			</tbody>
+			<tbody th:if="${totalCnt == 0}">
+		              	<tr>
+		                  	<td colspan="12">데이터가 없습니다.</td>
+		              	</tr>
+		              </tbody>
+		</table>
+		<!-- 테이블 리스트 END -->
+	</body>
+	</html>

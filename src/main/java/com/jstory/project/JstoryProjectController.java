@@ -1,4 +1,4 @@
-package com.jstory;
+package com.jstory.project;
 
 import java.util.ArrayList;
 import java.util.HashMap;

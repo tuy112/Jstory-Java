@@ -3,7 +3,7 @@ package com;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -12,11 +12,10 @@ import jakarta.servlet.http.HttpServletRequest;
 @RequestMapping("/error")
 public class ErrorController {
 
-	@GetMapping("")
-	// HTTP 상태 코드, 오류 메시지, 타임스탬프를 모델에 추가
-	public String handleError(HttpServletRequest request, Map<String, Object> model) {
+    @ExceptionHandler(Exception.class)
+    public String handleError(HttpServletRequest request, Exception ex, Map<String, Object> model) {
         Object status = request.getAttribute("javax.servlet.error.status_code");
-        Object errorMessage = request.getAttribute("javax.servlet.error.message");
+        String errorMessage = ex.getMessage();
 
         if (status != null) {
             model.put("status", status);
