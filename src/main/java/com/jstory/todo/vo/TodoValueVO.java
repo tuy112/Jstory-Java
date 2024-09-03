@@ -8,13 +8,11 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 public class TodoValueVO {
-    private Integer id;
+    private Long id;
     private String contents;
     private String completeYn;
     
     // 등록, 수정
     private LocalDateTime regDate;
-    private String regId;
     private LocalDateTime modDate;
-    private String modId;
 }
