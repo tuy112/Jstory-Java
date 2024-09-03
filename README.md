@@ -34,3 +34,9 @@ src/main/java/com/jstory/todo/
 #### 5. Service 작성
 
 #### 6. Controller 작성 및 API 엔드포인트 설정
+
+
+### Jstory_db todo table
+
+![image](https://github.com/user-attachments/assets/243cc4a7-d214-4d4c-9ca1-552e837b4f06)
+
