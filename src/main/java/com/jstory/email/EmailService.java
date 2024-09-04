@@ -11,7 +11,6 @@ import lombok.AllArgsConstructor;
 public class EmailService {
 
 	public void sendMail(MailDto mailDto) {
-        // 여기에 메일 발송 로직을 구현해야 합니다.
         sendEmail(mailDto.getTo(), mailDto.getSubject(), mailDto.getText());
     }
 	
